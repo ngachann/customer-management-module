@@ -1,11 +1,11 @@
 package com.example.customermanagementmodule.repository;
 
 import com.example.customermanagementmodule.entity.Contact;
-import org.hibernate.metamodel.model.convert.spi.JpaAttributeConverter;
-import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ContactRepository extends Specification<Contact>, JpaAttributeConverter<Contact, Long> {
+public interface ContactRepository extends JpaSpecificationExecutor<Contact>, JpaRepository<Contact, Long> {
 
 }

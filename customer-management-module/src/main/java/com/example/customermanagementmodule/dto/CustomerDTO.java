@@ -1,6 +1,5 @@
 package com.example.customermanagementmodule.dto;
 
-import jakarta.persistence.Column;
 import lombok.Getter;
 import lombok.Setter;
 
