@@ -30,4 +30,5 @@ public class Customer {
     private Long dtttrr;
     @OneToMany(mappedBy = "customer", orphanRemoval = true)
     private List<Contact> contacts = new ArrayList<>();
+
 }

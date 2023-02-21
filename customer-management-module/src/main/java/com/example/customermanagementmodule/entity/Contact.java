@@ -21,12 +21,11 @@ public class Contact {
     @Column(name = "contact_code")
     private String contactCode;
     private String position;
-    private String address;
-    private int age;
-
     @ManyToOne
     @JoinColumn(name = "customer_id_customer")
     @JsonIgnore
     private Customer customer;
+    private int age;
+    private String address;
 
 }

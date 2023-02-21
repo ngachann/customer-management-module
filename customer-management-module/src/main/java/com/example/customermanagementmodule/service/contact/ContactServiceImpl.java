@@ -1,8 +1,8 @@
 package com.example.customermanagementmodule.service.contact;
 
-import com.example.customermanagementmodule.dto.ContactDTO;
 import com.example.customermanagementmodule.entity.Contact;
 import com.example.customermanagementmodule.entity.Customer;
+import com.example.customermanagementmodule.exception.NotFoundException;
 import com.example.customermanagementmodule.repository.ContactRepository;
 import com.example.customermanagementmodule.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
@@ -30,6 +30,6 @@ public class ContactServiceImpl implements ContactService{
                 }
             }
         }
-        return null;
+        throw new NotFoundException("Không tìm thấy contact: " + contactCode,500);
     }
 }
