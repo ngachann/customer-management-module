@@ -1,5 +1,6 @@
 package com.example.customermanagementmodule.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,5 +20,10 @@ public class Contact {
     private String contactName;
     @Column(name = "contact_code")
     private String contactCode;
+    private String position;
+    @ManyToOne
+    @JoinColumn(name = "customer_id_customer")
+    @JsonIgnore
+    private Customer customer;
 
 }

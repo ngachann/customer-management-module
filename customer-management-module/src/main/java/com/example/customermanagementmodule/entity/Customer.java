@@ -5,6 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
@@ -24,5 +28,7 @@ public class Customer {
     private int age;
     private Long dttsrr;
     private Long dtttrr;
+    @OneToMany(mappedBy = "customer", orphanRemoval = true)
+    private List<Contact> contacts = new ArrayList<>();
 
 }
