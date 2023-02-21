@@ -21,6 +21,7 @@ public class Contact {
     @Column(name = "contact_code")
     private String contactCode;
     private String position;
+
     @ManyToOne
     @JoinColumn(name = "customer_id_customer")
     @JsonIgnore
