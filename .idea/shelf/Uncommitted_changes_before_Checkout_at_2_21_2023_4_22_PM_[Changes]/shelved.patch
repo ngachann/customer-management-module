@@ -1,0 +1,20 @@
+Index: customer-management-module/src/main/java/com/example/customermanagementmodule/entity/Contact.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.customermanagementmodule.entity;\r\n\r\nimport com.fasterxml.jackson.annotation.JsonIgnore;\r\nimport jakarta.persistence.*;\r\nimport lombok.*;\r\n\r\n@AllArgsConstructor\r\n@NoArgsConstructor\r\n@Setter\r\n@Getter\r\n@Builder\r\n@Entity(name = \"contact\")\r\n@Table(name = \"contact\")\r\npublic class Contact {\r\n    @Id\r\n    @GeneratedValue(generator = \"contact_seq\", strategy = GenerationType.IDENTITY)\r\n    @SequenceGenerator(name = \"contact\", sequenceName = \"id_contact_seq\", allocationSize = 1)\r\n    private Long idContact;\r\n    @Column(name = \"contact_name\")\r\n    private String contactName;\r\n    @Column(name = \"contact_code\")\r\n    private String contactCode;\r\n    private String position;\r\n\r\n    @ManyToOne\r\n    @JoinColumn(name = \"customer_id_customer\")\r\n    @JsonIgnore\r\n    private Customer customer;\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/customer-management-module/src/main/java/com/example/customermanagementmodule/entity/Contact.java b/customer-management-module/src/main/java/com/example/customermanagementmodule/entity/Contact.java
+--- a/customer-management-module/src/main/java/com/example/customermanagementmodule/entity/Contact.java	(revision df66aefae374440aee6dc7cced9e3f9364435da2)
++++ b/customer-management-module/src/main/java/com/example/customermanagementmodule/entity/Contact.java	(date 1677030916739)
+@@ -21,7 +21,8 @@
+     @Column(name = "contact_code")
+     private String contactCode;
+     private String position;
+-
++    private Integer age;
++    private String address;
+     @ManyToOne
+     @JoinColumn(name = "customer_id_customer")
+     @JsonIgnore
