@@ -5,10 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
@@ -28,6 +24,5 @@ public class Customer {
     private int age;
     private Long dttsrr;
     private Long dtttrr;
-    
 
 }
