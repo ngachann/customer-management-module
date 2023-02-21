@@ -5,15 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1d273b0-af26-428b-8665-e913aeb3a71c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-management-module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/CustomerManagementModuleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/CustomerManagementModuleApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/controller/ContactController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/service/customer/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/service/customer/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,6 +58,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -69,7 +90,7 @@
       <updated>1676978490276</updated>
       <workItem from="1676978491587" duration="386000" />
       <workItem from="1676980469178" duration="742000" />
-      <workItem from="1676993979196" duration="1485000" />
+      <workItem from="1676993979196" duration="8029000" />
     </task>
     <servers />
   </component>
