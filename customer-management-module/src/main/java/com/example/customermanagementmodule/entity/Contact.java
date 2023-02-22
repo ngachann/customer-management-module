@@ -23,6 +23,7 @@ public class Contact {
     private String position;
     private String address;
     private int age;
+    private int sage;
     @ManyToOne
     @JoinColumn(name = "customer_id_customer")
     @JsonIgnore
