@@ -1,5 +1,6 @@
 package com.example.customermanagementmodule.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,18 +18,16 @@ import java.util.List;
 @Table(name = "customer")
 public class Customer {
     @Id
-    @GeneratedValue(generator = "customer_seq", strategy = GenerationType.IDENTITY)
-    @SequenceGenerator(name = "customer_seq", sequenceName = "id_customer_seq", allocationSize = 1)
-    private Long idCustomer;
-    @Column(name = "customer_code")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id", nullable = false)
+    private Long id;
     private String customerCode;
-    @Column(name = "customer_name")
     private String customerName;
     private String address;
     private int age;
-    private Long dttsrr;
-    private Long dtttrr;
-    @OneToMany(mappedBy = "customer", orphanRemoval = true)
-    private List<Contact> contacts = new ArrayList<>();
-
+    private int dttsrr;
+    private int dtttrr;
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<Contact> contacts;
 }

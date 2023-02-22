@@ -1,5 +1,6 @@
 package com.example.customermanagementmodule.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
@@ -13,18 +14,17 @@ import lombok.*;
 @Table(name = "contact")
 public class Contact {
     @Id
-    @GeneratedValue(generator = "contact_seq", strategy = GenerationType.IDENTITY)
-    @SequenceGenerator(name = "contact", sequenceName = "id_contact_seq", allocationSize = 1)
-    private Long idContact;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id", nullable = false)
+    private Long id;
     @Column(name = "contact_name")
     private String contactName;
     @Column(name = "contact_code")
     private String contactCode;
     private String position;
-
     @ManyToOne
-    @JoinColumn(name = "customer_id_customer")
+    @JoinColumn(name = "customer_id_customer",nullable = false,referencedColumnName = "id")
+    @JsonBackReference
     @JsonIgnore
     private Customer customer;
-
 }

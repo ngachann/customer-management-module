@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1d273b0-af26-428b-8665-e913aeb3a71c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_32.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/dto/ResultDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/dto/show/ContactDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/dto/show/CustomerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/model/ModelMapperConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-management-module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/CustomerManagementModuleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/CustomerManagementModuleApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/controller/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/dto/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/dto/Customers20To30AgeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/dto/Customers20To30AgeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/entity/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/entity/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/service/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/service/customer/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/service/customer/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/java/com/example/customermanagementmodule/service/customer/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-management-module/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customer-management-module/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,27 +53,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "e25743f0cc4a6967564d9472be2a8e95",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e25743f0cc4a6967564d9472be2a8e95&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="CustomerManagementModuleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="customer-management-module" />
@@ -91,6 +94,10 @@
       <workItem from="1676978491587" duration="386000" />
       <workItem from="1676980469178" duration="742000" />
       <workItem from="1676993979196" duration="8029000" />
+      <workItem from="1677034641248" duration="980000" />
+      <workItem from="1677058748897" duration="6108000" />
+      <workItem from="1677064881688" duration="1559000" />
+      <workItem from="1677072426700" duration="15477000" />
     </task>
     <servers />
   </component>
