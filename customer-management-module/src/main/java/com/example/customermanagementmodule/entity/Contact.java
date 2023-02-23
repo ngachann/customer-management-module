@@ -17,14 +17,11 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long id;
-    @Column(name = "contact_name")
     private String contactName;
-    @Column(name = "contact_code")
     private String contactCode;
     private String position;
     @ManyToOne
     @JoinColumn(name = "customer_id_customer",nullable = false,referencedColumnName = "id")
     @JsonBackReference
-    @JsonIgnore
     private Customer customer;
 }

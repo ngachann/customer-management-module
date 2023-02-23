@@ -44,16 +44,18 @@ public class CustomerServiceImpl implements CustomerService {
         return ResultDto.builder().code(200).message("thanh cong").build();
     }
     @Override
-    public List<Object> showListCustomerByAge20_30() {
-        List<Object> customerList = customerRepository.findListBetween20and30(); // 1 mảng customer chứa yêu cầu đề bài
-//        List<Customers20To30AgeDTO> contacts = new ArrayList<>();
-//        for (Object i : customerList){
-//            Customers20To30AgeDTO x = mapper.map(i,Customers20To30AgeDTO.class);
-//            contacts.add(x);
-//        }
-        return customerList;
+    public List<Customers20To30AgeDTO> findCustomerByAgeBetween20and30() {
+        List<Customer> customers = customerRepository.getCustomerByAgeBetween20And30();
+        List<Customers20To30AgeDTO> customers20To30AgeDTOS = new ArrayList<>();
+        for (Customer i : customers){
+            List<Contact> contacts = i.getContacts();
+            for (Contact a : contacts){
+                Customers20To30AgeDTO x = mapper.map(a,Customers20To30AgeDTO.class);
+                customers20To30AgeDTOS.add(x);
+            }
+        }
+        return customers20To30AgeDTOS;
     }
-
 
 
 //    private Specification<Customer> buildSpec(ListFileImportLimitCreditRequestDTO requestDTO) {

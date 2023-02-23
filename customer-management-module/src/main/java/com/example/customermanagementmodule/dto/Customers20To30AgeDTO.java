@@ -13,9 +13,11 @@ import java.util.List;
 @RequiredArgsConstructor
 @Getter
 public class Customers20To30AgeDTO {
-    private int id;
-    private int age;
+    @JsonProperty("contactName")
     private String contactName;
+    @JsonProperty("contactCode")
     private String contactCode;
+    @JsonProperty("position")
     private String position;
+
 }

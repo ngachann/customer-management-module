@@ -16,4 +16,9 @@ public interface CustomerRepository extends JpaRepository<Customer,Long>, JpaSpe
     Customer findCustomerByCustomerCode(String Str);
     @Query(value = "SELECT customer.id, customer.age, contact.contact_name,contact.contact_code,contact.position FROM contact INNER JOIN customer ON contact.customer_id_customer = customer.id where age between 20 and 30 ",nativeQuery = true)
     List<Object> findListBetween20and30();
+    @Query(value = "select * from customer where age between 20 and 30",nativeQuery = true)
+    List<Customer> findCustomersByAgeBetween20And30(); // trả ra mảng customer 20-30;
+                                                      // mapping sang dto đầu ra
+    @Query(value = "select * from customer where age between 20 and 30",nativeQuery = true)
+    List<Customer> getCustomerByAgeBetween20And30();
 }

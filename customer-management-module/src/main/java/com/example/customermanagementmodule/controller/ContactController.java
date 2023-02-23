@@ -23,13 +23,12 @@ public class ContactController {
     public ResponseEntity<List<CustomerDto>> showByStirngCode(@RequestBody String str){
         return ResponseEntity.ok(customerService.showListCustomerByListString(str));
     }
-
     @PostMapping("/createCustomer") // thêm mới 1 customer
     public ResponseEntity<Object> createCustomer(@RequestBody Customer customer){
         return ResponseEntity.ok(customerService.createCustomer(customer));
     }
     @GetMapping("/showListBetween20and30") // hiện ra danh sách thông tin contact mà customer.age trong khoảng 20 và 30
-    public ResponseEntity<List<Object>> show20and30(){
-        return ResponseEntity.ok(customerService.showListCustomerByAge20_30());
+    public ResponseEntity<List<Customers20To30AgeDTO>> show20and30s(){
+        return ResponseEntity.ok(customerService.findCustomerByAgeBetween20and30());
     }
 }

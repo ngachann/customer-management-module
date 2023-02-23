@@ -10,7 +10,8 @@ import com.example.customermanagementmodule.entity.Customer;
 import java.util.List;
 
 public interface CustomerService {
-    List<CustomerDto> showListCustomerByListString(String str);
-    ResultDto createCustomer(Customer customer);
-    List<Object> showListCustomerByAge20_30();
+    List<CustomerDto> showListCustomerByListString(String str); // tìm các customer theo chuỗi code truyền vào
+    ResultDto createCustomer(Customer customer);        // tạo customer
+
+    List<Customers20To30AgeDTO> findCustomerByAgeBetween20and30();
 }
