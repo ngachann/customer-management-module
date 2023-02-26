@@ -1,8 +1,6 @@
 package com.example.customermanagementmodule.service.customer;
 
-import com.example.customermanagementmodule.dto.CustomerDTO;
-import com.example.customermanagementmodule.dto.Customers20To30AgeDTO;
-import com.example.customermanagementmodule.dto.ResultDto;
+import com.example.customermanagementmodule.dto.*;
 import com.example.customermanagementmodule.dto.show.ContactDto;
 import com.example.customermanagementmodule.dto.show.CustomerDto;
 import com.example.customermanagementmodule.entity.Contact;
@@ -11,8 +9,14 @@ import com.example.customermanagementmodule.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Spliterators;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
@@ -57,29 +61,20 @@ public class CustomerServiceImpl implements CustomerService {
         return customers20To30AgeDTOS;
     }
 
+    @Override
+    public int Sum() {
+        return customerRepository.SumDttsrr()+customerRepository.SumDtttrr();
+    }
 
-//    private Specification<Customer> buildSpec(ListFileImportLimitCreditRequestDTO requestDTO) {
-//        return (root, cq, cb) -> {
-//            List<Predicate> predicates = new ArrayList<>();
-//            if (StringUtils.isNotEmpty(requestDTO.getByUser())) {
-//                predicates.add(cb.equal(cb.upper(root.get(STR_CREATED_BY)), StringUtils.trimToEmpty(requestDTO.getByUser().toUpperCase())));
-//            }
-//            if (StringUtils.isNotEmpty(requestDTO.getUserApprove())) {
-//                predicates.add(cb.equal(cb.upper(root.get("approveBy")), StringUtils.trimToEmpty(requestDTO.getUserApprove().toUpperCase())));
-//            }
-//            if (StringUtils.isNotEmpty(requestDTO.getStatus())) {
-//                predicates.add(cb.equal(cb.upper(root.get("status")), StringUtils.trimToEmpty(requestDTO.getStatus().toUpperCase())));
-//            }
-//            if (StringUtils.isNotEmpty(requestDTO.getFileName())) {
-//                predicates.add(cb.like(cb.upper(root.get(STR_FILE_NAME)), appendLikeExpression(StringUtils.trimToEmpty(requestDTO.getFileName().toUpperCase()))));
-//            }
-//            if (StringUtils.isNotEmpty(requestDTO.getCardId())) {
-//                Join<CreditLimit, CreditLimitDetail> sync = root.join("limitCreditDetailList");
-//                predicates.add(cb.equal(sync.get("cardId"), StringUtils.trimToEmpty(requestDTO.getCardId())));
-//            }
-//            specCreateDate(requestDTO, root, cb, predicates);
-//            specApproveDate(requestDTO, root, cb, predicates);
-//            return cq.where(predicates.toArray(new Predicate[0])).getRestriction();
-//        };
-//    }
+    @Override
+    public int SumByAge(int age) {
+        int x = customerRepository.SumDttsrrByAge(age)+customerRepository.SumDtttrrByAge(age);
+        return x;
+    }
+    // chuyển từ dữ liệu trong db sang dto trong project
+    @Override
+    public List<CustomerAge> AgeByCustomer() {
+        List<Object[]> objectList = customerRepository.AgeByCustomer();
+        return objectList.stream().map(x->new CustomerAge(x)).collect(Collectors.toList());
+    }
 }

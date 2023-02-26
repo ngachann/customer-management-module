@@ -1,14 +1,12 @@
 package com.example.customermanagementmodule.repository;
 
-import com.example.customermanagementmodule.dto.CustomerDTO;
-import com.example.customermanagementmodule.dto.Customers20To30AgeDTO;
-import com.example.customermanagementmodule.dto.show.ContactDto;
-import com.example.customermanagementmodule.entity.Contact;
+import com.example.customermanagementmodule.dto.CustomerAge;
 import com.example.customermanagementmodule.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
 
 import java.util.List;
 @Repository
@@ -21,4 +19,14 @@ public interface CustomerRepository extends JpaRepository<Customer,Long>, JpaSpe
                                                       // mapping sang dto đầu ra
     @Query(value = "select * from customer where age between 20 and 30",nativeQuery = true)
     List<Customer> getCustomerByAgeBetween20And30();
+    @Query(value = "select sum(dttsrr) from customer",nativeQuery = true)
+    int SumDttsrr();
+    @Query(value = "select sum(dtttrr) from customer",nativeQuery = true)
+    int SumDtttrr();
+    @Query(value = "select sum(dttsrr) from customer where age = ?1",nativeQuery = true)
+    int SumDttsrrByAge(int age);
+    @Query(value = "select sum(dttsrr) from customer where age = ?1",nativeQuery = true)
+    int SumDtttrrByAge(int age);
+    @Query(value = "select count(age) as num ,age as age from customer GROUP BY age",nativeQuery = true)
+    List<Object[]> AgeByCustomer();
 }
